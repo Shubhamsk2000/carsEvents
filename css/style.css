@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1E1E1E;
+
+}
+
+.main-bg {
+    background-image: url("../images/newBack.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.firstPage {
+    margin: 0px 70px;
+}
+
+nav {
+    display: flex;
+    height: 75px;
+    align-items: center;
+}
+
+.logo img {
+    height: 90px;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    gap: 115px;
+}
+
+/* navigation li bottom hover animation */
+nav li {
+    position: relative;
+}
+
+nav li::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    border-bottom: 2px solid red;
+    bottom: -5px;
+    transition: width 0.4s ease;
+}
+
+nav li:hover::before {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 0px 5px;
+}
+
+/* main heading and subheading button css */
+.main-bg h1 {
+    text-transform: capitalize;
+    font-size: 64px;
+    color: white;
+    letter-spacing: 1.5px;
+    position: relative;
+    top: 80px;
+}
+
+.main-bg h1 span {
+    transition: color 0.2s ease;
+}
+
+.main-bg h1:hover span {
+    color: red;
+}
+
+.main-bg h2 {
+    text-transform: capitalize;
+    font-size: 46px;
+    color: #FE2625;
+    letter-spacing: 1px;
+    position: relative;
+    top: 90px;
+
+}
+
+.mainBtn {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    border: 3px solid #FE2625;
+    padding: 15px 30px;
+    position: absolute;
+    margin: 150px 0px;
+    transition: all 0.4s ease;
+}
+
+.mainBtn:hover {
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mainBtn:active {
+    scale: 0.9;
+}
+
+/* scroll-down animation button */
+.scrollDown {
+    height: 100px;
+    width: 70px;
+    border: 2px solid white;
+    border-radius: 50px;
+    position: sticky;
+    left: 93%;
+    bottom: 3%;
+    display: inline-block;
+}
+
+.scrollDown::after,
+.scrollDown::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 4px solid red;
+    height: 30px;
+    width: 30px;
+    transform: translate(-50%, 90%) rotate(45deg);
+    border-bottom: none;
+    border-right: none;
+    animation: scrollDown 2s ease-in-out infinite;
+}
+
+.scrollDown::after {
+    top: 35%;
+    animation-delay: .1s;
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: -20%
+    }
+}
+
+/* section gallery css */
+#Gallery {
+    margin: 30px;
+    padding: 30px;
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 46px;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.heading span {
+    color: #FE2625;
+}
+
+
+/* section events css start */
+
+.events-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 130px 135px;
+    align-items: center;
+    
+}
+
+.events-images {
+    overflow: hidden;
+    border-radius: 23px;
+    width:40%;
+}
+
+.events-content{
+padding: 0px 0px;
+width: 55%;
+}
+.events-content h2{
+    font-size: 40px;
+    color: red;
+    font-family: 'Roboto Slab', serif;
+    
+}
+.events-content p{
+padding: 10px 0px;
+color: white;
+font-size: 20px;
+font-family: 'Roboto Slab', serif;
+}
+
+.events-images img {
+    height: 400px;
+    transition: all 0.3s ease-out;
+}
+
+.events-images img:hover {
+    scale: 1.1;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+
+}
+
+footer p {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* extrass */
